@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/sherlook22/chat-socket.io/issues"
   },
-  "homepage": "https://github.com/sherlook22/chat-socket.io#readme"
+  "homepage": "https://github.com/sherlook22/chat-socket.io#readme",
+  "devDependencies": {
+    "git-commit-msg-linter": "^3.1.0"
+  }
 }
