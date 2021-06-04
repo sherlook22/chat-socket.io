@@ -18,6 +18,10 @@
   },
   "homepage": "https://github.com/sherlook22/chat-socket.io#readme",
   "devDependencies": {
-    "git-commit-msg-linter": "^3.1.0"
+    "eslint": "^7.27.0",
+    "git-commit-msg-linter": "^3.1.0",
+    "husky": "^4.3.8",
+    "lint-staged": "^11.0.0",
+    "standard": "^16.0.3"
   }
 }
