@@ -1,18 +1,12 @@
 const app = require('express')()
-const socketio = require('socket.io')
-const http = require('http')
+const socketApi = require('./socket-api')
+const server = require('http').createServer(app)
 const router = require('./router/index')
 
-app.use('/api', router)
-const server = http.createServer(app)
-const io = socketio(server)
+// const server = http.createServer(app)
+const io = require('socket.io')(server, { cors: { origin: '*' } })
+socketApi(io)
 
-io.on('connection', (socket) => {
-  console.log('New connection started')
+app.use(router)
 
-  socket.on('disconnect', () => {
-    console.log('Disconect')
-  })
-})
-
-module.exports = app
+module.exports = server
